@@ -1,0 +1,412 @@
+/*--------------------------------------------------------------------------------------*/
+/*CSS for Navigation Bar*/
+
+/*sets the font for the whole page and padding/margins for the nav bar to appear at the very top*/
+* {
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    font-family: 'Calibri Light', sans-serif;
+  }
+  
+  /*color for the navbar*/
+  header{
+    background-color:#ffffff;
+  }
+  
+  li{
+    list-style: none;
+  }
+  
+  a{
+    color: #0B2447;
+    text-decoration:none;
+  }
+  
+  /*styles for the navigation bar by using flex to set up a responsive design*/
+  .navbar{
+    position:fixed;
+    width: 100%;
+    top: 0px;
+    min-height:70px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+    border-bottom: solid 10px #576CBC;
+    background-color: white;
+    
+  }
+  
+  /*styles the navigation links*/
+  .nav-elem {
+    font-size: 1.5rem;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    
+  }
+  
+  /*css for Team name*/
+  .nav-name {
+    font-size: 4vw;
+    color: #576CBC;
+    font-family: 'Calibri Light', sans-serif;
+    font-weight: bold;
+  }
+  
+  .nav-link {
+    transition:0.6s;
+  
+  }
+  
+  /*create hover effect for the navigation links*/
+  .nav-link:hover{
+    background-color: #19376D;
+    color: #A5D7E8;
+    padding: 20px 20px;
+  }
+  
+  .hamburger{
+    display:none; /*Don't want the hamburger to appear, we only want it to appear when the window is minimized to a certain width will use the @media later to make this hamburger appear*/
+    cursor:pointer;
+  }
+  
+  .bar{
+    display:block;
+    width:25px; /*sets wthe width of the hamburger bars*/
+    height: 3px; /*sets the height of the hamburger bars*/
+    margin: 5px auto; /*sets the spacing of the hamburger bars*/
+    background-color: #19376D;
+  }
+  
+  
+  @media(max-width:1120px){  /*determines at what width the hamburger will appear*/
+    .hamburger{
+      display: block; 
+    }
+    /*Want to create an X when the hamburger is clicked on*/
+    .hamburger.active .bar:nth-child(2){ /*sets it so that the middle hamburger bar will dissapear*/
+      opacity:0;
+    }
+    .hamburger.active .bar:nth-child(1){
+      transform:translateY(8px) rotate(45deg); /*sets it so that the first hamburger bar will roatate at a 45 degrees angle and translate 8px*/ 
+  
+    }.hamburger.active .bar:nth-child(3){
+      transform:translateY(-8px) rotate(-45deg); /*sets it so that the first hamburger bar will roatate at a 45 degrees angle andtranslate 8px*/ 
+  
+    }
+
+    .hamburger.active{
+      position:fixed;
+
+    }
+    /*This section will edit how the menu looks like when clicking the hamburger*/
+    .nav-elem{
+      position:fixed; /*when scrolling the navigation menu will stay on the screen*/
+      left:100%; 
+      gap:0;
+      flex-direction: column; /* So that the dropdown menu when opening the hamburger displays as columns*/
+      background-color: #ffffff;
+      width: 100%;
+      text-align: center;
+      top:1px;
+      transition: 0.3s;
+    }
+    .nav-item{
+      margin:16px 0;
+    }
+    .nav-elem.active{
+      left:0;
+    }
+  }
+  
+   /*Main Page CSS source: https://www.youtube.com/watch?v=ZdJSHEczi_0*/
+/* and source: https://www.youtube.com/watch?v=ZYV6dYtz4HA to help create responsive texts for the main menu*/
+a {
+    text-decoration: none;
+  }
+
+  /*sets the responsive design for the background image*/
+.home-section {
+  background-image: url(/images/background1.jpg);
+  background-repeat: no-repeat;
+  width: 100vw;
+  height:100vh;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center; 
+}
+
+/*margins for the text*/
+.section-content{
+ margin-bottom: 280px;
+ color:rgb(255, 255, 255);
+ text-align: center;
+
+}
+/*font size and color for h1*/
+.section-content h1{
+  font-size: 7vmin;
+  color: rgb(255, 246, 246);
+
+}
+
+/*style for the line in the middle of the screen*/
+.line {
+  width: 350px;
+  height: 4px;
+  background: #19376D;
+  margin: 10px auto;
+  border-radius: 3px;
+
+}
+/*positioning for h2 and their font size and background color*/
+.section-content h2{
+  font-size: 4vmin;
+  margin-top: 50px;
+  margin-bottom: 30px; 
+  color: rgb(255, 255, 255);
+
+}
+
+/*styles for the fake button*/
+.consult{
+  padding: 8px 12px;
+  background:#19376D;
+  border-radius: 20px;
+  color:rgb(251, 251, 251);
+  font-size: 2vmin;
+}
+/*create a hover effect for the fake button*/
+.consult:hover{
+  background: #576CBC;
+  transition: 0.6s;
+  color: white;
+}
+
+
+  /*CSS for Our Team*/
+
+  /*set margin for whole page and aligns text to be in the center*/
+  .wrapper{
+    margin-top: 140px;
+    margin-bottom: 60px;
+    text-align: center;
+  
+  }
+  /*set the font size color and margin for h1*/
+  .wrapper h1{
+    font-size: 48px;
+    color: #19376D;
+    margin-bottom: 25px;
+  }
+  
+
+  .our_team{
+    width: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+  }
+  
+  .our_team .team_member{
+    width: 450px;
+    margin: 5px;
+    padding: 20px 10px;
+  }
+  
+  .our_team .team_member .member_img{
+    background: #19376D;  
+    max-width: 250px;
+    width: 100%;
+    height: 240px;
+    margin: 0 auto;
+    border-radius: 50%;
+    padding: 5px;
+  
+  }
+  
+  .our_team .team_member .member_img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 60%;
+  }
+  
+  .our_team .team_member h3{
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: 2px;
+    margin: 15px 0 0px;
+  }
+  
+  .our_team .team_member span{
+    font-size: 15px;
+    font-style: italic;
+  }
+  
+  .our_team .team_member p{
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  
+  /*CSS for Problem Statement*/
+.problem-section .row{
+  display:block;
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  color: rgb(90, 84, 73);
+  margin-bottom: 40px;
+}
+
+/*Style for the top block*/
+.problem-top{
+  background-color: #0B2447;
+  padding: 5% 5%;
+  color: white;
+}
+
+/*style for the middle block*/
+.problem-middle {
+  background-color: #19376D;
+  padding: 5% 5%;
+  color: white;
+}
+
+/*style for the middle1 block*/
+.problem-middle1 {
+  background-color: #576CBC;
+  padding: 5% 5%;
+  color: white;
+}
+
+/*style for the bottom block*/
+.problem-bottom{
+  background-color: #21a8b4 ;
+  padding: 5% 5%;
+  color:white
+}
+
+/*style for the text by setting margins so the text dont appear stuck to the block and navigation bar*/
+.problem-text{
+font-size: 4vmin;
+margin-top: 20px;;
+margin-bottom: 20px;
+}
+
+/* CSS for the Methodolgy Page */
+.methods-section{
+  width: auto;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+/*customizes the style and size for the h2*/
+.methods-section h2 {
+  font-size: 4vmin;
+  color: #19376D;
+}
+/*customizes the style and size for the h3*/
+.methods-section h3 {
+  font-size: 3vmin;
+}
+
+/*customizes the style for the paragraphs*/
+.methods-section p{
+  font-size: 2.5vmin;
+  margin: 5px;
+  margin-left: 120px;
+  margin-right: 120px;
+  text-align: left;
+}
+
+.next-page p{
+  margin: 50px;
+  margin-bottom: ;
+  text-align: left;
+}
+
+.methods-image img{
+  width: 100%;
+  max-width: 800px;
+  height: 100%;
+  margin: 20px;
+}
+
+/*styles for the fake button*/
+.solutions-button{
+
+  padding: 10px 36px;
+  background:#19376D;
+  border-radius: 20px;
+  color:rgb(251, 251, 251);
+  
+}
+/*create a hover effect for the fake button*/
+.solutions-button:hover{
+  background: #576CBC;
+  transition: 0.6s;
+  color: white;
+}
+
+/*CSS for solutions page */
+
+.solution-content{
+  width: auto;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+
+.solution-content h2 {
+  font-size: 4vmin;
+  margin: 10px;
+  color: #19376D;
+}
+
+.solution-content h3 {
+  font-size: 3vmin;
+  margin: 30px;
+  color: #19376D;
+}
+
+.solution-content p{
+  font-size: 2.5vmin;
+  margin: 5px;
+  margin-left: 80px;
+  margin-right: 80px;
+  text-align: left;
+}
+
+/*CSS For StoryMaps Page*/
+
+.story-link {
+  margin-top: 20px;
+  padding: 20px 20px;
+  margin-left: 290px;
+  margin-right: 290px;
+  border-radius: 20px;
+  color:rgb(250, 250, 250);
+  font-size: 3vmin;
+  text-align: center;
+
+}
+
+.story-link:hover{
+  background: #A5D7E8;
+  transition: 0.6s;
+  color: white;
+}
+
+.story-image img{
+  width: 100%;
+  height: 100%;
+  margin: 20px;
+}

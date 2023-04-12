@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AAVA</title>  <!-- Title of website -->
+    <link rel="stylesheet" href="mystyle.css"> <!-- link to CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- Link to font awesomes for icons -->
+    <link href="https://fonts.cdnfonts.com/css/calibri-light" rel="stylesheet"> <!-- link to calibri light font-->
+</head>
+<!-- HTML for the Navigation Bar - by: Andy Mo-->
+<header>
+  <nav class = "navbar">
+    <a href="index.html" class="nav-name">AAVA </a> <!-- class for company name-->
+    <ul class = "nav-elem">
+      <li class ="nav-item">
+        <a href="index.html" class="nav-link">Home</a> <!-- class and link for homepage--></li>
+      <li class ="nav-item">
+        <a href="OurTeam.html" class="nav-link">Our Team</a> <!-- class and link for Meet the Team--></li>
+      <li class ="nav-item">
+        <a href="ProblemStatement.html" class="nav-link">Problem Statement</a> <!-- class and link for FAQ--></li>
+      <li class ="nav-item">
+        <a href="Methods.html" class="nav-link">Methods</a>  <!-- class and link for Area of Practice--></li>
+        <li class ="nav-item">
+            <a href="Solutions.html" class="nav-link">Solutions</a> <!-- class and link for FAQ--></li> 
+            <li class ="nav-item">
+                <a href="storymap.html" class="nav-link">StoryMap</a> <!-- link to storymap in the navbar --></li> 
+    </ul>
+    <div class ="hamburger"> <!-- Adds hamburger -->
+      <span class ="bar"></span> <!-- Creates the first bar of the hamburger-->
+      <span class ="bar"></span> <!-- Creates the second bar of the hamburger-->
+      <span class ="bar"></span> <!-- Creates the second bar of the hamburger-->
+    </div>
+  </nav>
+</header>
+<script src="script1.js"></script>
+
+<div class="wrapper">
+    <div class="methods-section">
+        <div class ="title-header">
+            <h1> Finding the Solution</h1>
+        </div>
+
+        <div class="next-page">
+            <div class="line"></div>
+
+        <div class="method-content">
+          <h2> Selecting Our Topic  </h2>   
+          <p>When planning the solutions for this assignment, 
+            the initial task our team set out to solve involved 3D solutions to displaying temporal 
+            data within a web environment. With this in mind our team started the quest to find the best solution to 
+            display 3D temporal data. Our initial thought of displaying 3D stemmed from being able to stack data layers on top
+            of one another in order to visualize more than one year at a time. And so, our team started to look at methods to stack 
+            data years. 
+          </p>
+
+        </div>
+
+        <div class="methods-section">
+            <h2>Displaying 3D Temporal Data</h2>
+            <p>Time Cube by aggregation points was our first main attempt of finding a solution for a 3D model. 
+                ESRI offers an online tutorial for this method, so our team took advantage of this and started following the steps 
+                necessary to completing this task. For this, we first needed to acquire point data. Through the city of Toronto’s 
+                Police service open data portal we accessed the Toronto Crime data. 
+                From this, we accessed assault crime data from the year 2014 and 2022. 
+                This data was point data, which was required for this demo.Though following all the steps exactly as the 
+                demo instructed our team faced multiple roadblocks along the way. 
+            <div class="methods-image">
+                <img src="images/timecube.png" alt="Toronto-data">
+            </p>
+        </div>
+
+        <div class="methods-section">
+            <h2>Time Cubes: Attempt #1</h2>
+            <p>To ensure the group was not facing user error, our team created an ArcGIS online community group, 
+                to which we all had access to in order to share the existing data set. This was created so that we could all attempt 
+                the demo with the same dataset but of different computers and with different users. With this in mind, three of our 
+                team mates attempted this demo and could not find an adequate solution to the problem. We believe along with user error 
+                (despite us finding solutions to mitigating this), not only did we not comprehend fully the extent of the demo but the 
+                backend aspect of this processing tool. We struggled to comprehend the output and how to properly work with a netCDF file 
+                (the file that was created as an output). From these incomprehensible attributes being such important aspects of this, 
+                we struggle to make this 3D model work. In this case, our misunderstanding and lack of knowledge within 3D technology 
+                limited us to not produce a solution. 
+    
+
+        <div class="methods-section">
+            <h2>Time Cubes: Attempt #2</h2>
+            <p>With the previous attempt in mind, our team approached this idea, however, from a defined location point of view. 
+                We reimagined the outcome and based it not on aggregated points but from the actual location of the data itself. 
+                Using the same assault crime data from the City of Toronto’s police service open portal we started though the process of 
+                the tutorial demo once more. This time, rather than having three teammates attempt this, only one attempted it whilst the 
+                others researched for other possible 3D solutions. When importing the data to each field, and running the process, 
+                the processing tool failed to work with the data we provided. With these two tutorial demo’s not producing any adequate outputs to solve 3D solutions, our team decided to take another route. Although our team did continue to look into methods for 3D, we decided to use our time more effectively and efficiently, and to start to look at 2D methods. From there we produced three solutions on how to best represent temporal data in a website setting. See our solutions page to gain a better understanding of what our team produced. 
+                
+
+        <div class ="title-header2">
+            <h2> Transitioning to 2D: Animating Tessellations over Time</h2>
+        </div>
+
+        <div class="methods-section">
+            <h2>Method #1</h2>
+            <p>With our team attempting to work with 3D data and struggling to , we decided to take a different approach in order to output a final solution. In this case, our team started to look at 2D solutions rather than 3D. With the previous attempt in mind, our team approached this idea, however, from a defined location point of view. 
+                We reimagined the outcome and based it not on aggregated points but from the actual location of the data itself. 
+                Using the same assault crime data from the City of Toronto’s police service open portal we started though the process of 
+                the tutorial demo once more. This time, rather than having three teammates attempt this, only one attempted it whilst the 
+                others researched for other possible 3D solutions. When importing the data to each field, and running the process, 
+                the processing tool failed to work with the data we provided. With these two tutorial demo’s not producing any adequate outputs to solve 3D solutions, our team decided to take another route. Although our team did continue to look into methods for 3D, we decided to use our time more effectively and efficiently, and to start to look at 2D methods. From there we produced three solutions on how to best represent temporal data in a website setting. See our solutions page to gain a better understanding of what our team produced. 
+
+            <div class="methods-image">
+                <img src="images/" alt="Time Cube">
+            </p>
+        </div>
+
+        
+        <div class="methods-section">
+            <h2>Method #2</h2>
+            <p> A different methodology was attempted to animate time of tessellations of enabling time on the original point data 
+                and displaying time within the aggregate points geoprocessing tool. Using Esri documentation of the tool and time 
+                stepping and testing different variations of parameters in both the original time layer settings and the geoprocessing tool,
+                the team was unable to create tessellations over time. 
+                
+            <h3> Web Integration </h3>
+            <p>To represent the different layers of tessellations, each feature layer was saved as individual map layers. 
+                The StoryMap slider was utilized to visualize these select two layers.
+            </p>
+            <h3>Limitation</h3>
+            <p>A limitation of this method, if it were to work as the documentation states, would have the same limitations of the 
+                earlier tessellation process being on the desktop. The barriers we faced and issues we attempted to resolve were in the 
+                stages of working on ArcGIS Pro as stated in the above process. There is no product in Esri’s online environment that is 
+                capable of creating the tessellations or creating a time animation of web maps or layers completed.
+
+            </p>
+            <div class="methods-image">
+                <img src="images/method1a.jpg" alt="Time Cube">
+
+                <div class="methods-image">
+                    <img src="images/method1b.jpg" alt="Time Cube">
+            </p>
+        </div>
+
+        <div class="next-page">
+            <div class="line"></div>
+        <p>We believe that 3D solutions is a great way to represent temporal data. However, 
+            our attempts in making something that can be visually represented and be able to effectively
+            communicate it was challenging. Nonetheless, 2D options also provide an excellent solution in 
+            representing temporal time in a way that is easy to understand and is user interactive. The following link are those of the 2D nature, 
+            and are solutions our team could create adequate output for. </p>      
+              <a href="Solutions.html" class="solutions-button">View</a>
+      </div>
+    </div>
+        
+    </div>
+</div>
+
+        

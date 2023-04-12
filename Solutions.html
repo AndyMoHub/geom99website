@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AAVA</title>  <!-- Title of website -->
+    <link rel="stylesheet" href="mystyle.css"> <!-- link to CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- Link to font awesomes for icons -->
+    <link href="https://fonts.cdnfonts.com/css/calibri-light" rel="stylesheet"> <!-- link to calibri light font-->
+</head>
+<!-- HTML for the Navigation Bar - by: Andy Mo-->
+<header>
+  <nav class = "navbar">
+    <a href="index.html" class="nav-name">AAVA </a> <!-- class for company name-->
+    <ul class = "nav-elem">
+      <li class ="nav-item">
+        <a href="index.html" class="nav-link">Home</a> <!-- class and link for homepage--></li>
+      <li class ="nav-item">
+        <a href="OurTeam.html" class="nav-link">Our Team</a> <!-- class and link for Meet the Team--></li>
+      <li class ="nav-item">
+        <a href="ProblemStatement.html" class="nav-link">Problem Statement</a> <!-- class and link for FAQ--></li>
+      <li class ="nav-item">
+        <a href="Methods.html" class="nav-link">Methods</a>  <!-- class and link for Area of Practice--></li>
+        <li class ="nav-item">
+            <a href="Solutions.html" class="nav-link">Solutions</a> <!-- class and link for FAQ--></li>
+            <li class ="nav-item">
+                <a href="storymap.html" class="nav-link">StoryMap</a> <!-- link to storymap in the navbar --></li>  
+    </ul>
+    <div class ="hamburger"> <!-- Adds hamburger -->
+      <span class ="bar"></span> <!-- Creates the first bar of the hamburger-->
+      <span class ="bar"></span> <!-- Creates the second bar of the hamburger-->
+      <span class ="bar"></span> <!-- Creates the second bar of the hamburger-->
+    </div>
+  </nav>
+</header>
+<script src="script1.js"></script>
+
+<div class="wrapper">
+    <div class="solutions-section">
+
+        <div class="title-solutions">
+            <h1> Our Solution </h1>
+        </div>
+
+        <div class="solution-content">
+            <h2>Comparing Temporal Data Using Slider</h2>
+            <h3>ArcGIS Pro Pre-Processing</h3>
+            <p>Point data of assaults from Toronto were used in this solution. 
+                There were several years of data within the point layer, but only two 
+                years of data were used for this slider; 2014 and 2022. To extract each 
+                of these years, a select query was used to create a 2014 point file and 
+                a 2022 point file. After that, the Generate Tesselation tool was used to 
+                create many empty hexagons polygons, and then the Aggregate Points tool 
+                was used to populate these empty hexagons with the Toronto assault point 
+                data. The symbology was then adjusted for each tesselation layer 
+                (2014 and 2022) and I made sure they had the exact same ranges so the data 
+                comparison was accurate.
+            </p>
+            <h3>Web Technology Integration</h3>
+            <p>
+                The two web layers were shared to ArcGIS Online in the group that our 
+                eam created. A web map was then created for each layer, and the 
+                transparency was adjusted to 70% for both to allow the street basemap 
+                below to provide context to the tesselation layer. After both web maps were made, 
+                a storymap was created and a slider was added. Within the slider, the 2014 web map 
+                was added on one side, and the 2022 web map was added on the other. After the 
+                storymap was published, the user would be able to use the slider and compare the 
+                Toronto assault data from 2014 to 2022
+            </p>
+
+            <div class="solutions-image">
+                <img src="images/slider.jpg" alt="temporal-slider">
+            </div>
+
+            <h3>Issues and Limitations</h3>
+            <p>At first, other group members tried to create the tesselations and aggregate them 
+                with the points from the AGOL group portal. However, to aggregate the points to 
+                the tesselations in ArcGIS Pro you cannot use data points from an input feature 
+                service (ArcGIS Online). So whenever anyone would try and do that the input would 
+                display a red x beside it and output that error. Only the person that had access 
+                to that data layer was able to populate the tesselations. The only other way someone 
+                else could have populated the tesselation would have been to share the geodatabase 
+                (with the point layer in it) with everyone.
+                The main limitation of the slider is that it only displays two years of data at once. 
+                This is great if you want to view little details between two different time periods, 
+                but if your desire is to view more than two time periods of data, a different type of 
+                technology would be more adequate
+                </p>
+            
+                <div class="solution-content">
+                    <h2>Comparing Temporal Data using Map Actions </h2>
+                    <h3>ArcGIS Pro Pre-Processing</h3>
+                    <p>The Historic Limit of Peterborough shapefiles were collected from the City of 
+                        Peterborough Open Access Portal. The Historic Limits cover the years from 
+                        1825 - 2013. The data was imported into ArcGIS Pro where each year was exported 
+                        as an individual feature layer and shared to ArcGIS Online. Once the items were 
+                        shared to ArcGIS Online, the feature layers were added to MapViewer where 
+                        symbology from color brewer was applied to give the different historic limits 
+                        color. They were also ungrouped into their individual layers 
+                        (this is an important step for creating map actions). 
+
+                    </p>
+                    <h3>Web Technology Integration</h3>
+                    <p>
+                        Our group wanted a way to represent temporal time that was interactive and could 
+                        represent more than two periods of time. Upon much research we were able to come 
+                        across a solution that involved using map actions to show multiple periods of 
+                        time. The use of map actions would essentially present a timeline map which would 
+                        show the expansion of Peterborough’s City from 1825 - 2013 and also allows users 
+                        to explore the history of the city in an interactive way. 
+                    </p>
+                    <div class="solutions-image">
+                        <img src="images/mapaction.jpg" alt="temporal-slider">
+                    </div>
+                    <h3>The Result</h3>
+                    The user is able to interact with the City of Peterborough and click on the different 
+                    periods of time in the city’s history to see how the city’s extent has developed over 
+                    time
+
+                    <h3>Issues and Limitations</h3>
+                    <p>The use of map actions is a powerful and effective way of presenting how cities can 
+                        change over time. Therefore, there is an abundant amount of information you can 
+                        show in these map actions to further demonstrate the growing city of Peterborough 
+                        and its history. For example, rather than just showing the historic extents, 
+                        you could add significant events or landmarks which could really enhance the map 
+                        and demonstrate how they shaped the city's history over time. However,  
+                        time constraints and difficulty finding the appropriate data made it challenging 
+                        to implement. 
+                    </p>
+
+                        <div class="solution-content">
+                            <h2>Exploring Temporal Data with Time Settings </h2>
+                            <h3>Pre-Processing</h3>
+                            <p>The data used for exploring time settings was the 2022 point data of 
+                                Toronto crime from a shared layer in the teams group on ArcGIS Online.
+                                Example data was also downloaded for reference from Esri of Southern 
+                                Elephant Seal Track points layer in early 2009. 
+                            </p>
+                            <h3>Web Technology Integration</h3>
+                            <p>
+                                A recurring theme of working with temporal data is the configuration 
+                                of time settings. Enabling time allows for specifying the time interval and range of the data, allowing for many different types of temporal representation cascading through Esri applications. 
+                            </p>
+
+                            <p>Time can only be enabled at a layer’s item page but only on layers that 
+                                are unpublished or in ArcGIS Pro before it is shared as a web layer. 
+                                The main Esri documentation of configuring time assumes that enabling 
+                                time settings is an option and does not go into detail about where to go 
+                                if this isn’t an option. For this first attempt of time configuration, 
+                                the team went in search of further documentation and data with time enabled 
+                                to successfully create a time slider in ArcGIS Online. Example data from 
+                                Esri’s online portal of Elephant Seal migration displayed these points 
+                                progressively showing track points being added to the map animated with a 
+                                time slider. It was at this layer's item page that time was enabled under 
+                                overview details and in the mapviewer on the menu of configurable settings 
+                                on the right hand side. Esri documentation was also found providing more 
+                                detail and visual aids which allowed us to enable time settings on our own 
+                                2022 crime data point layer.
+                            </p>
+
+                            <div class="solutions-image">
+                                <img src="images/timeenabled.jpg" alt="temporal-slider">
+                            </div>
+
+                            <h3>Solving The Problem</h3>
+                            <p>Once time settings were enabled for the layer, navigating time settings 
+                                in the map viewer was straightforward. On the right menu, the time option 
+                                is now present enabling and disabling the time slider. The time slider 
+                                properties are found under settings in the left icon menu and time slider 
+                                options. These settings allow the user to set an interval of time or 
+                                progressively display the data, the start/end date and time along with 
+                                other settings of playback speed and more.
+                            </p>
+
+                            <div class="solutions-image">
+                                <img src="images/timeoption.jpg" alt="temporal-slider">
+                            </div>
+
+                            <h3>ArcGIS Online Time Slider</h3>
+
+                            <div class="solutions-image">
+                                <img src="images/timeslider.jpg" alt="temporal-slider">
+                            </div>
+
+                            <p>Since the 2022 Toronto crime point data layer now has time 
+                                enabled, this allows time visualization in other ArcGIS 
+                                Online applications like Experience Builder. A timeline 
+                                widget using the already established time specifications from the original time slider can be used in the web app. Adding the data source for the map already created inserts the map with the data points, then from the left sidebar, drag and drop to insert the timeline widget. Then insert the same data source material and configure the time settings like you would the time slider.
+                            </p>
+
+                            <h3>Experience Builder Time Widget</h3>
+                            
+                            <div class="solutions-image">
+                                <img src="images/experiencebuilder.jpg" alt="temporal-slider">
+                            </div>
+
+                            <h3>Issues and Limitations</h3>
+                            <p>As convenient as it is to have time settings carried through the Esri environment, 
+                                it is impossible to work with temporal visualization if the base layer of data 
+                                does not have time enabled. These settings have to be considered from the 
+                                beginning and if the layer is published or does not have time enabled, it needs 
+                                to be downloaded to the desktop environment, saved in the file geodatabase of a 
+                                desktop project and enabled there, to be shared again in the online environment. 
+                                This was frustrating when trying to work with other layers without the time enabling 
+                                option on the item page or trying to work with temporal data in experience builder 
+                                without the knowledge from the above process.
+                            </p>
+
+
+        </div>
+
+
+
+
+        
+    </div>
