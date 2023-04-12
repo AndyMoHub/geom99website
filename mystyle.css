@@ -130,7 +130,7 @@ a {
 
   /*sets the responsive design for the background image*/
 .home-section {
-  background-image: url(/images/background1.jpg);
+  background-image: url(images/background1.jpg);
   background-repeat: no-repeat;
   width: 100vw;
   height:100vh;
